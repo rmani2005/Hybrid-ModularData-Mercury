@@ -31,7 +31,7 @@ public class TC_login extends TestBase
 	public void stdLogin(String username, String password)
 	{
 		pro=new propLoader();
-		key=new keywords();
+		key=new keywords(driver);
 		Log.info("Check the site is logged into the home page");
 		if(!loggedin)
 		{
@@ -42,10 +42,12 @@ public class TC_login extends TestBase
 			
 			WebElement userEle=TestBase.getElement(driver, pro.getGlobalProp("username"));
 			WebElement passEle=TestBase.getElement(driver, pro.getGlobalProp("password"));
+			String value=null;
+			key.enterText(userEle, value);
+			key.enterText(passEle, value);
+			key.click_action(TestBase.getElement(driver, pro.getOrProp("ln_sign_in_submit")), value);
 			
-			
-			//
-			//keyclick_Action();
+			loggedin = true;
 		}
 		
 		
