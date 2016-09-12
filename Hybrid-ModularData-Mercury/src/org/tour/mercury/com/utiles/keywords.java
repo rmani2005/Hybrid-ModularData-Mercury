@@ -7,14 +7,22 @@ import org.tour.mercury.com.logs.Log;
 public class keywords 
 {
 
-	public void click_action(WebDriver driver, WebElement ele)
+	WebDriver driver;
+	
+	public void click_action(WebElement ele)
 	{
-		ele.click();
-		Log.info("Click action has been performed on WebElement: ");
+		try {
+			ele.click();
+			Log.info("Click action has been performed on WebElement: ");
+		} catch (Exception e) {
+			e.printStackTrace();
+			Log.error("Error while performing the click_action");
+			Log.fatal(e.toString());
+			}
 		
 	}
 	
-	public void click_action(WebDriver driver, WebElement ele)
+	public void sendKey(WebDriver driver, WebElement ele)
 	{
 		ele.click();
 		Log.info("Click action has been performed on WebElement: ");
