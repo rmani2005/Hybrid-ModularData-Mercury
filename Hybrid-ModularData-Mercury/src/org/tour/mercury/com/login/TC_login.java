@@ -3,16 +3,19 @@ package org.tour.mercury.com.login;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.tour.mercury.com.base.TestBase;
 import org.tour.mercury.com.logs.*;
 import org.tour.mercury.com.utiles.propLoader;
+import org.tour.mercury.com.utiles.keywords;
 
-public class TC_login 
+public class TC_login extends TestBase
 {
 	WebDriver driver;
 	public static boolean loggedin=false;
 	public static Properties objProp=null;
 	public static propLoader pro;
-	
+	keywords key=null;
 	public TC_login()
 	{
 		 
@@ -28,6 +31,7 @@ public class TC_login
 	public void stdLogin(String username, String password)
 	{
 		pro=new propLoader();
+		key=new keywords();
 		Log.info("Check the site is logged into the home page");
 		if(!loggedin)
 		{
@@ -36,7 +40,12 @@ public class TC_login
 			
 			Log.info("Getting the Base URL from the Global Properties");
 			
-			WebElement userEle=driver.findElement(pro.getOrProp("base_url"))
+			WebElement userEle=TestBase.getElement(driver, pro.getGlobalProp("username"));
+			WebElement passEle=TestBase.getElement(driver, pro.getGlobalProp("password"));
+			
+			
+			//
+			//keyclick_Action();
 		}
 		
 		
