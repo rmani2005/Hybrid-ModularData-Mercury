@@ -1,15 +1,15 @@
 package org.tour.mercury.com.logs;
 
 import org.apache.log4j.Logger;
-import org.apache.log4j.xml.DOMConfigurator;
+//import org.apache.log4j.xml.DOMConfigurator;
 
 public class Log
 {
-	private static Logger log=Logger.getLogger(Log.class.getName());
-	private Log()
+	private static Logger log=Logger.getLogger("devpinoyLogger");
+	/*public Log()
 	{
 	  DOMConfigurator.configure("Log4j.xml");
-	}
+	}*/
 
 	public static void info(String msg) 
 	{
