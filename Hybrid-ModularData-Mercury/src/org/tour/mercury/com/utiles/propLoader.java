@@ -33,6 +33,7 @@ public class propLoader
 	{
 		return globalProp.getProperty(property);
 	}
+	
 	public String getOrProp(String property) 
 	{
 		return orProp.getProperty(property);

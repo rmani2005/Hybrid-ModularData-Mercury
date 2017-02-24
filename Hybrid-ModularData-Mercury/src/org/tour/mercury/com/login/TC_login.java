@@ -16,6 +16,7 @@ public class TC_login extends TestBase
 	public static propLoader pro;
 	public static keywords key=null;
 	
+	@Test
 	public TC_login()
 	{
 		 
