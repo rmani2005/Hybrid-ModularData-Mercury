@@ -1,0 +1,11 @@
+ChromeDriver="C:\\work\\chromedriver.exe"
+URL=https://www.goindigo.in/
+Login=.//*[@id='navUiMobile']/ul[2]/li[6]/a
+MobileNo=.//*[@id='memberId']
+Password=.//*[@id='Member']/div/div[2]/div[1]/form[2]/div/ul[1]/li[3]/input
+SignIN=.//*[@id='Member']/div/div[2]/div[1]/form[2]/div/ul[1]/li[4]/button
+Logout=.//*[@id='memlogout']/a
+Home=html/body/div[4]/header/div/div/a/img
+bookFlight=.//*[@id='navUiMobile']/ul/li[1]/a
+Oneway=.//*[@id='Oneway_']
+popuponeway=.//*[@id='oneWaySearchModal']/div/div/div[3]/div/a
